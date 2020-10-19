@@ -1,0 +1,389 @@
+<!-- Copyright Jean-Charles Edel / Marque Advance Acoustic - Ne pas rendre public SVP -->
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Advance Acoustic</title>
+		<meta name="description" content="description de la page en 160 caractères">
+		<link href="img/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+		<link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+		<link href="img/icon-normal.png" rel="icon" sizes="128x128">
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+		<link href="css/aos.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+		<script>
+			var lat = 48.853466; var lon = 2.348131; var macarte = null; var villes = {
+				"Saturn Elektrohandels GmbH": { "lat": 52.437937, "lon": 13.262166 },
+				"Reydis one Av": { "lat": 36.700199, "lon": -4.494761 },
+				"Metex": { "lat": 55.689887, "lon": 37.621683 },
+				"Dhhd Audio": { "lat": -32.981484, "lon": 27.907669 },
+				"Daa Woong Inc.": { "lat": 37.492224, "lon": 127.014796 },
+				"Videotron": { "lat": 45.391307, "lon": -73.578241 },
+				"Metex": { "lat": 55.689887, "lon": 37.621683 },
+			}; function initMap() {
+					macarte = L.map('map').setView([lat, lon], 3); L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', { attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' + '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' + 'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+					id: 'mapbox/streets-v11',
+					tileSize: 512,
+					zoomOffset: -1	
+			}).addTo(macarte); for (ville in villes) {	var marker = L.marker([villes[ville].lat, villes[ville].lon]).addTo(macarte); marker.bindPopup(ville); } } 
+			window.onload = function(){ initMap(); macarte.scrollWheelZoom.disable(); };
+		</script>
+		<link rel="stylesheet" href="css/styles.css" type="text/css">
+	</head>
+	<body id="top">
+		<header id="navbar">
+			<div class="container" id="menu1">
+				<a href="contact.html" title="Contactez-nous"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+				<a href="panier.html" title="Votre panier"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+				<a href="distributeurs.html" title="Distributeurs"><i class="fa fa-map-marker" aria-hidden="true"></i></a>
+				<a href="mon-compte.html" title="Mon compte"><i class="fa fa-user" aria-hidden="true"></i></a>
+				<a href="connexion.html" title="Connectez-vous"><i class="fa fa-lock" aria-hidden="true"></i></a>
+			</div>
+			<div class="container" id="menu2">
+				<a href="index.html" id="logo"><img src="img/logo.gif" alt="Advance Acoustic"></a>
+				<input class="burger fa" type="checkbox">
+				<nav>
+					<ul>
+						<li><a href="elements-integres.html">Éléments intégrés</a>
+							<ul class="sous-menu">
+								<li><a href="pre-ampli.html">Pré-ampli</a></li>
+								<li><a href="ampli-puissance-stereo.html">Ampli puissance stéréo</a></li>
+								<li><a href="lecteurs-multimedia.html">Lecteurs multimedia</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Enceintes HiFi</a>
+							<ul class="sous-menu">
+								<li><a href="colonnes.html">Colonnes</a></li>
+								<li><a href="subwoofer.html">Subwoofer</a></li>
+								<li><a href="enceintes-sans-fil.html">Enceintes sans fil</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Multimedia & Sans fil</a>
+							<ul class="sous-menu">
+								<li><a href="chaine-compact.html">Chaîne compact</a></li>
+								<li><a href="transmetteur-hifi.html">Transmetteur HiFi</a></li>
+								<li><a href="lecteur-reseau-wifi.html">Lecteur réseau WiFi</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<div class="progress-container">
+				<div class="progress-bar" id="myBar"></div>
+			</div>
+		</header>
+		<main>
+			<div id="diaporama">
+				<figure class="touch">
+					<img srcset="img/diapo-ks11-768.jpg 768w, img/diapo-ks11.jpg 1920w" sizes="100vw" src="img/diapo-ks11.jpg" alt="">
+					<img srcset="img/diapo-air50-768.jpg 768w, img/diapo-air50.jpg 1920w" sizes="100vw" src="img/diapo-air50.jpg" alt="">
+					<img srcset="img/diapo-xl1000-768.jpg 768w, img/diapo-xl1000.jpg 1920w" sizes="100vw" src="img/diapo-xl1000.jpg" alt="">
+				</figure>
+			</div>
+			<script>
+				if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) { document.write("<style>#diaporama{overflow:scroll}</style>"); }
+			</script>
+			<article class="container clearfix" id="intro">
+				<h1>Advance Acoustic : chaînes Haute&nbsp;Fidélité</h1>
+				<img src="img/electronique.png" alt="Electronique">
+				<p>Advance Acoustic s'engage à apprivoiser vos oreilles car, le plaisir d'écouter du Bon Son passe surtout par un Bon Matériel.</p>
+				<p>Pour répondre à l'attente des mélomanes les plus exigeants qui portent une attention particulière au résultat final de leur système audio et qui consacrent une part importante de leurs loisirs à l'écoute de la musique, nous avons créé des amplificateur, pré-amplificateurs, lecteurs CD et lecteur multimédia, et un ensemble Haute Fidélité « all in one » dont les capacités musicales raviront les plus exigeants.</p>
+			</article>
+			<section class="container clearfix" id="last">
+				<div class="h2bg0"><h2>Derniers produits</h2></div>
+				<article data-aos="zoom-in" data-aos-duration="300">
+					<a href="dac/dx1.html">
+						<h3>DX1</h3>
+						<img src="img/dx1.jpg" alt="">
+						<p>DAC</p> 
+					</a>
+				</article>
+				<article data-aos="zoom-in" data-aos-duration="600">
+					<a href="ampli-stereo/bx1.html">
+						<h3>BX1</h3>
+						<img src="img/bx1.jpg" alt="">
+						<p>Ampli stéréo</p>
+					</a>
+				</article>
+				<article data-aos="zoom-in" data-aos-duration="900">
+					<a href="ampli-mono/xa1200.html">
+						<h3>XA1200</h3>
+						<img src="img/xa1200.jpg" alt="">
+						<p>Ampli mono</p>
+					</a>
+				</article>
+				<article data-aos="zoom-in" data-aos-duration="1200">
+					<a href="integre/x-i50-bt.html">
+						<h3>X-i50-BT</h3>
+						<img src="img/x-i50-bt.jpg" alt="">
+						<p>Intégré</p>
+					</a>
+				</article>
+			</section>
+			<div id="focus">
+				<section class="parallax">
+					<div>
+						<h2>WTX Microstreamer</h2>
+						<p>Le plus petit lecteur réseau Plug & Play multiroom du monde</p>
+					</div>
+				</section>
+				<article>
+					<h3>Présentation</h3>
+					<p>Advance Acoustic présente le nouveau système connecté Advance Acoustic <b>WTX-Microstreamer</b> associé aux enceintes colonnes Air 150.</p><p>Ce système intègre un amplificateur de 2x120 Watts, un lecteur réseau Wi-Fi, un récepteur Bluetooth et des entrées auxiliaires analogiques et numériques.</p><p>Avec l’application Advance Playstream, il est possible d’écouter de la musique stockée sur des périphériques tels qu’un smartphone ou un NAS, mais aussi d’utiliser des services de streaming en ligne.</p>
+				</article>
+				<article>
+					<h3>Fiche technique</h3>
+					<table>
+						<thead>
+							<tr><th>Propriété</th><th>Valeur</th></tr>
+						</thead>
+						<tbody>
+							<tr><td>STREAMING PC/MAC/NAS</td><td>YES</td></tr>
+							<tr><td>STREAMING SMARTPHONES</td><td>YES</td></tr>
+							<tr><td>STREAMING SERVICE</td><td>Spotify, Tidal, Tune-In, Qobuz</td></tr>
+							<tr><td>AUXILIARY INPUT</td><td>YES</td></tr>
+							<tr><td>APPS</td><td>Android & App store </td></tr>
+							<tr><td>WIFI</td><td>802.11 b/g/n </td></tr>
+							<tr><td>AUDIO FORMAT</td><td>APE, FLAC, WAV, ALAC, AAC, HE-AAC, MP3, WMA</td></tr>
+							<tr><td>DIMENSIONS</td><td>H.75 x l.14 x D.49/55mm</td></tr>
+						</tbody>
+					</table>
+				</article>
+				<article>
+					<h3>Visuel</h3>
+					<button id="myBtn">
+						<img src="img/wtx.png" alt="">
+						<i class="fa fa-plus fa-5x"></i>
+					</button>
+					<div id="myModal" class="modal">
+						<div class="modal-content">
+							<span class="close">&times;</span>
+							<img src="img/wtx.png" alt="">
+						</div>
+					</div>
+				</article>
+				<article>
+					<h3>Vidéo</h3>
+					<div class="video">
+						<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/_7dbNQH5RbU" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+				</article>
+				<div class="h2bg0">
+					<a href="integre/wtx.html" class="cta">WTX : en savoir plus</a>
+				</div>
+			</div>
+			<section class="container" id="best">
+				<div class="h2bg0"><h2>Meilleures ventes</h2></div>
+				<article data-aos="zoom-in" data-aos-duration="300">
+					<a href="integre/ax1.html">
+						<h3>AX1</h3>
+						<img src="img/ax1.jpg" alt="">
+						<p>Intégré</p>	
+					</a>
+				</article>
+				<article data-aos="zoom-in" data-aos-duration="600">
+					<a href="lecteur-reseau/wtx.html">
+						<h3>WTX</h3>
+						<img src="img/wtx.jpg" alt="">
+						<p>Lecteur réseau WiFi</p>
+					</a>
+				</article>
+				<article data-aos="zoom-in" data-aos-duration="900">
+					<a href="enceintes-sans-fil-aptx/air50.html">
+						<h3>Air 50</h3>
+						<img src="img/air50.jpg" alt="">
+						<p>Enceinte sans fil APTX</p>
+					</a>
+				</article>
+				<article data-aos="zoom-in" data-aos-duration="1200">
+					<a href="integre/xi75.html">
+						<h3>X-i75</h3>
+						<img src="img/x-i75.jpg" alt="">
+						<p>Intégré</p>
+					</a>
+				</article>
+			</section>
+			<section id="formulaire">
+				<div class="h2bgf"><h2>Quel mélomane êtes-vous ?</h2></div>
+				<p>Participez à notre sondage et gagner 5% sur votre prochaine commande !</p>
+				<form>
+					<fieldset>
+						<legend>Votre profil</legend>
+						<input type="text" placeholder="Nom" required>
+						<input type="text" placeholder="Prénom" required>
+						<input type="tel" placeholder="Téléphone" required>
+						<input type="email" placeholder="E-mail" required>
+						<label for="date">Date de naissance :</label><input type="date" id="date">
+					</fieldset>
+					<fieldset>
+						<legend>Sondage</legend>
+						<label for="couleurs">Attribuez une couleur à la musique :</label>
+						<input type="color" id="couleurs">
+						<p>Quel style(s) de musique préférez-vous ?</p>
+						<input type="checkbox" id="rock"><label for="rock">rock</label>
+						<input type="checkbox" id="rap"><label for="rap">rap</label>
+						<input type="checkbox" id="electro"><label for="electro">electro</label>
+						<input type="checkbox" id="classique"><label for="classique">classique</label>
+						<input type="checkbox" id="world"><label for="world">world</label>
+						<p>Si vous deviez écouter non-stop un genre, ce serait :</p>
+						<input type="radio" id="choixrock" name="choix"><label for="choixrock">Plutôt rock</label>
+						<input type="radio" id="choixclassique" name="choix"><label for="choixclassique">Plutôt classique</label>
+						<p>Dans le style chanson française, préférez-vous...</p>
+						<select required>
+							<option disabled selected>Choisir</option>
+							<option>Adamo</option>
+							<option>Jacques Brel</option>
+							<option>M</option>	
+						</select>
+					</fieldset>
+					<button class="cta">Envoyer</button>
+				</form>
+			</section>
+			<section id="actualites">
+				<div class="h2bg0"><h2>Advance Actualités</h2></div>
+				<article data-aos="zoom-in" data-aos-duration="300">
+					<img src="img/X-i1100-detail.jpg" alt="">
+					<h3>Advance Lab</h3>
+					<small>Advance, <time datetime="2020-09-03">3 septembre 2020</time></small>
+					<p>La musique, invention de l’homme, est un art et une des pratiques les plus anciennes au monde. À travers les époques, les traditions, les différentes cultures, la musique engendre une sensation de plaisir, capable de procurer des émotions intenses. Ce sont ces notions de plaisir et d'émotions musicales qui ont conduit l'équipe d'Advance Acoustic à vouloir la reproduire sans compromis.</p>
+					<a href="actualites/advance-lab.html" class="cta">Lire la suite</a>
+				</article>
+				<article data-aos="zoom-in" data-aos-duration="600">
+					<img src="img/laudiodefrance.webp" alt="">
+					<h3>Test ampli Hifi Advance Acoustic X-i75 : élégant, bien conçu et destiné à toutes les musiques</h3>					
+					<small>L'audio de France, <time datetime="2019-12-10">10 décembre 2019</time></small>
+					<p>Troisième amplificateur de la nouvelle gamme X-i d'Advance Acoustic, cet intégré stéréo ne surprend pas par ses lignes élégantes et le nombre de ses possibilités, car c'est habituel chez la marque française. Effectivement, Advance Acoustic s’évertue depuis sa création à proposer des appareils d’un rapport fonctionnalité/qualité/prix plus que sympathique ; le X-i75 n’échappe pas à cette règle.</p>
+					<a href="actualites/advance-paris-la-haute-fidelite-musicale-accessible.html" class="cta">Lire la suite</a>
+				</article>	
+				<article data-aos="zoom-in" data-aos-duration="900">
+					<img src="img/x-i75_test_on-mag.jpg" alt="">
+					<h3>ADVANCE Paris : la Haute-Fidélité musicale accessible</h3>
+					<small>On Mag, <time datetime="2019-05-24">24 mai 2019</time></small>
+					<p>La marque Advance Acoustic a démarré son activité à Toulouse, en fabricant des enceintes au rapport qualité/prix très étudié qui ont très rapidement connu le succès auprès des mélomanes passionnés de musique et de Haute-Fidélité. En 1997 elle se fait sérieusement remarquer en obtenant  le titre de  « meilleur rapport qualité-prix du marché « . Les années 2000 verront apparaître la naissance d’une gamme d’électroniques, tout en maintenant les tarifs abordables qui ont forgé son succès.</p>
+					<a href="actualites/test-ampli-hifi-advance-acoustic-x-i75.html" class="cta">Lire la suite</a>
+				</article>		
+			</section>
+			<div id="partage">
+				<h3>Partager :</h3>
+				<a href="https://twitter.com" title="Nous partager sur Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+				<a href="https://facebook.com" title="Nous partager sur Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+				<a href="https://pinterest.com" title="Nous partager sur Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+			</div>
+			<section>			
+				<div id="distributeurs">
+					<div class="h2bg0"><h2>Distributeurs</h2></div>
+				</div>
+
+				<div id="map"></div>
+			</section>
+			<div id="reassurance">
+				<a href="paiement.html" class="flipping-card">
+					<figure>
+						<i class="fa fa-lock fa-3x" aria-hidden="true"></i>
+						<figcaption><b>Paiement 3D Secure</b></figcaption>
+					</figure>
+				</a>
+				<a href="port.html" class="flipping-card">
+					<figure>
+						<i class="fa fa-truck fa-3x" aria-hidden="true"></i>
+						<figcaption><b>Frais de port offerts</b></figcaption>
+					</figure>
+				</a>
+				<a href="parrainage.html" class="flipping-card">
+					<figure>
+						<i class="fa fa-money fa-3x" aria-hidden="true"></i>
+						<figcaption><b>Programme parrainage</b></figcaption>
+					</figure>
+				</a>
+				<a href="sav.html" class="flipping-card">
+					<figure>
+						<i class="fa fa-phone fa-3x" aria-hidden="true"></i>
+						<figcaption><b>Service après vente</b></figcaption>
+					</figure>
+				</a>
+				<a href="qualite.html" class="flipping-card">
+					<figure>
+						<i class="fa fa-check fa-3x" aria-hidden="true"></i>
+						<figcaption><b>Garantie et qualité</b></figcaption>
+					</figure>	
+				</a>
+			</div>
+		</main>
+		<footer>
+			<div class="container">
+				<address>
+					<b>Advance Paris</b>13 rue du coq gaulois<br>77170 Brie Comte Robert<br>France<br>Tél : <a href="tel:+33160185900">+33 (0) 160 185 900</a><br>Mail : <a href="mailto:info@advance-acoustic.com">info@advance-acoustic.com</a>
+				</address>
+				<nav>
+					<h2>Informations</h2>
+					<ul>
+						<li><a href="societe.html">La société</a></li>
+						<li><a href="distributeurs.html">Distributeurs</a></li>
+						<li><a href="mentions.html">Mentions légales</a></li>
+						<li><a href="confidentialite.html">Confidentialité</a></li>
+						<li><a href="contact.html">Plan du site</a></li>
+					</ul>
+				</nav>
+				<nav>
+					<h2>Mon compte</h2>
+					<ul>
+						<li><a href="panier.html">Mon panier</a></li>
+						<li><a href="profil.html">Mon profil</a></li>
+						<li><a href="commandes.html">Mes commandes</a></li>
+						<li><a href="garantie.html">Garantie</a></li>
+						<li><a href="connexion.html">Connexion</a></li>
+					</ul>
+				</nav>
+				<nav>
+					<h2>Nous suivre</h2>
+					<a href="https://twitter.com" target="_blank"><i class="fa fa-twitter fa-3x" aria-hidden="true"></i></a>
+					<a href="https://facebook.com" target="_blank"><i class="fa fa-facebook fa-3x" aria-hidden="true"></i></a>
+					<a href="https://pinterest.com" target="_blank"><i class="fa fa-pinterest fa-3x" aria-hidden="true"></i></a>
+					<img src="img/logo.gif" alt="Advance Acoustic">
+				</nav>
+			</div>
+			<a href="#top" id="gototop"><span id="triangle" title="Revenir en haut de page"></span></a>
+		</footer>
+		<script>
+			var scrollpos = window.scrollY;
+			var header = document.getElementById("navbar");
+			function add_class_on_scroll() { header.classList.add("sticky"); }
+			function remove_class_on_scroll() { header.classList.remove("sticky"); }
+			window.addEventListener('scroll', function(){ 
+			    scrollpos = window.scrollY;
+			    if(scrollpos > 10){ add_class_on_scroll(); }
+			    else { remove_class_on_scroll(); }
+			    console.log(scrollpos);
+			});
+		</script>
+		<script>
+			window.onscroll = function() {progressbarFunction()};
+			function progressbarFunction() {
+			  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+			  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+			  var scrolled = (winScroll / height) * 100;
+			  document.getElementById("myBar").style.width = scrolled + "%";
+			} 
+		</script>
+		<script src="js/aos.js"></script>
+		<script>AOS.init();</script>
+		<script>
+			const parallax = document.querySelector('.parallax');
+			window.addEventListener('scroll', () => {
+				parallax.style.backgroundPositionY = -window.scrollY / 7 + "px";
+			});
+		</script>
+		<script>
+			var modal = document.getElementById("myModal");
+			var btn = document.getElementById("myBtn");
+			var span = document.getElementsByClassName("close")[0];
+			btn.onclick = function() { modal.style.display = "block"; }
+			span.onclick = function() { modal.style.display = "none"; }
+			window.onclick = function(event) {
+			  if (event.target == modal) { modal.style.display = "none"; }
+			}
+		</script>
+	</body>
+</html>
